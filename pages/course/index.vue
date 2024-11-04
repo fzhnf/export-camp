@@ -5,8 +5,8 @@
       <div class="flex flex-col md:flex-row items-center">
         <div class="text-center md:text-left md:w-1/2 space-y-4">
           <h1 class="text-4xl font-bold leading-snug">
-            Belajar Mudah <br />
-            Strategi Dan Cara Ekspor <br />
+            Belajar Mudah <br>
+            Strategi Dan Cara Ekspor <br>
             Sampai Ahli
           </h1>
           <p class="text-lg text-gray-500 dark:text-gray-200">
@@ -22,14 +22,16 @@
             src="/assets/img/header.jpg"
             alt="Hero Image"
             class="rounded-lg shadow-lg max-w-full h-auto"
-          />
+          >
         </div>
       </div>
     </div>
 
     <!-- Popular Courses Section -->
     <div class="container mx-auto px-4 py-16">
-      <h2 class="text-2xl font-semibold mb-8 text-center">Kursus Terpopuler</h2>
+      <h2 class="text-2xl font-semibold mb-8 text-center">
+        Kursus Terpopuler
+      </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div
           v-for="course in 8"
@@ -40,9 +42,11 @@
             src="/assets/img/populer.png"
             alt="Course Image"
             class="w-full h-40 object-cover"
-          />
+          >
           <div class="p-4">
-            <p class="text-center font-semibold text-black">Lorem Ipsum</p>
+            <p class="text-center font-semibold text-black">
+              Lorem Ipsum
+            </p>
           </div>
         </div>
       </div>
@@ -63,10 +67,14 @@
             src="/assets/img/populer.png"
             alt="Roadmap Image"
             class="w-1/4 h-24 object-cover rounded-lg"
-          />
+          >
           <div class="flex-grow">
-            <p class="text-lg font-semibold text-black">Lorem Ipsum</p>
-            <p class="text-sm text-gray-500">Kevin Gilbert</p>
+            <p class="text-lg font-semibold text-black">
+              Lorem Ipsum
+            </p>
+            <p class="text-sm text-gray-500">
+              Kevin Gilbert
+            </p>
             <div class="flex items-center space-x-2 text-sm text-gray-500 mt-2">
               <span><i class="nuxt-icon">account_circle</i> 265.7K siswa</span>
               <span><i class="nuxt-icon">show_chart</i> pemula</span>
@@ -79,7 +87,9 @@
 
     <!-- Latest Courses Section -->
     <div class="container mx-auto px-4 py-16">
-      <h2 class="text-2xl font-semibold mb-8 text-center">Kursus Terbaru</h2>
+      <h2 class="text-2xl font-semibold mb-8 text-center">
+        Kursus Terbaru
+      </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div
           v-for="latestCourse in 4"
@@ -90,9 +100,11 @@
             src="/assets/img/populer.png"
             alt="Latest Course Image"
             class="w-full h-40 object-cover"
-          />
+          >
           <div class="p-4">
-            <p class="text-center font-semibold text-black">Lorem Ipsum</p>
+            <p class="text-center font-semibold text-black">
+              Lorem Ipsum
+            </p>
           </div>
         </div>
       </div>
