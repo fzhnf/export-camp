@@ -8,37 +8,34 @@ const links = [
   },
   {
     label: 'Academy',
-    to: '/academy'
   },
   {
     label: 'Challenge',
-    to: '/challenge'
   },
   {
     label: 'Event',
-    to: '/event'
   },
   {
     label: 'Job',
-    to: '/job'
   }
 ];
 </script>
 
 <template>
   <header class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-800">
-    <!-- Logo Section -->
+    <!-- Left Section: Logo and Navigation Links -->
     <div class="flex items-center space-x-4">
-      <!-- Replace with your logo -->
-      <!--<img src="path/to/logo.png" alt="Logo" class="h-8 w-auto" />-->
+      <!-- Logo -->
+      <nuxt-icon name="export-camp-logo" class="text-3xl text-green-500" />
+
       <!-- Navigation Links -->
       <UHorizontalNavigation :links="links" class="space-x-6" />
     </div>
 
-    <!-- Right Section -->
+    <!-- Right Section: Theme Toggle, Notifications, User Profile -->
     <div class="flex items-center space-x-4">
       <!-- Theme Toggle Button -->
-      <ToggleTheme />
+      <NavBarToggleTheme />
 
       <!-- Notification Icon -->
       <UButton label="Notifications" icon="i-heroicons-bell-20-solid" variant="ghost" color="gray">

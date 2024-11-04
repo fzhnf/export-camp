@@ -1,5 +1,5 @@
 <!-- ToggleTheme.vue -->
-<script>
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const colorMode = useColorMode();
