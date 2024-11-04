@@ -23,7 +23,6 @@ useHead({
     lang: "en",
   },
 });
-const layout = "default";
 
 //const layout = computed(() => {
 //  const isTourRoute = route.path.includes("/tour");
@@ -34,7 +33,7 @@ const layout = "default";
 
 <template>
   <div class="font-manrope w-screen overflow-hidden">
-    <NuxtLayout :name="layout">
+    <NuxtLayout name="default">
       <NuxtPage />
     </NuxtLayout>
   </div>
