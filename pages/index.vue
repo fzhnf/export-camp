@@ -12,8 +12,6 @@ const { data: bucket } = await supabase.storage.listBuckets();
 </script>
 
 <template>
-	<pre>{{ country }}</pre>
-	<pre>{{ bucket }}</pre>
 	<div>
 		<!-- Hero Section -->
 		<div class="container mx-auto px-4 py-16">
