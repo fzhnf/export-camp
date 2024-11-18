@@ -1,5 +1,4 @@
-import type { Product, ProductParams } from "@/types/product";
-import type { Response } from "@/types/response";
+import type { Product } from "@/types/product";
 
 export function productService() {
   const { $api } = useNuxtApp();

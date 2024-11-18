@@ -1,23 +1,22 @@
 <script setup lang="ts">
-
 // Navigation links
 const links = [
   {
-    label: 'Home',
-    to: '/'
+    label: "Home",
+    to: "/",
   },
   {
-    label: 'Academy',
+    label: "Academy",
   },
   {
-    label: 'Challenge',
+    label: "Challenge",
   },
   {
-    label: 'Event',
+    label: "Event",
   },
   {
-    label: 'Job',
-  }
+    label: "Job",
+  },
 ];
 </script>
 
@@ -40,13 +39,15 @@ const links = [
       <!-- Notification Icon -->
       <UButton label="Notifications" icon="i-heroicons-bell-20-solid" variant="ghost" color="gray">
         <!-- Optional badge for unread notifications -->
-        <span class="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full"></span>
+        <span class="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full" />
       </UButton>
 
       <!-- User Profile Icon -->
       <div class="relative">
-        <img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="User"
-          class="h-8 w-8 rounded-full border-2 border-cyan-500" />
+        <img
+          src="https://avatars.githubusercontent.com/u/739984?v=4" alt="User"
+          class="h-8 w-8 rounded-full border-2 border-cyan-500"
+        >
         <!-- Dropdown could be added here for additional user options -->
       </div>
     </div>

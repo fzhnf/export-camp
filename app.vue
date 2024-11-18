@@ -1,47 +1,44 @@
 <script setup lang="ts">
 const supabase = useSupabaseClient();
 
+const { data: country } = await useAsyncData("restaurant", async () => {
+	const { data } = await supabase.from("countries").select();
 
-const { data: country } = await useAsyncData('restaurant', async () => {
-  const { data } = await supabase.from('countries').select()
-
-  return data
-})
-console.log(country)
-
+	return data;
+});
+console.log(country);
 
 const colorMode = useColorMode();
 const route = useRoute();
 
-const color = computed(() => colorMode.value === "dark" ? "#111827" : "#f1f5f9");
+const color = computed(() =>
+	colorMode.value === "dark" ? "#111827" : "#f1f5f9"
+);
 
 useHead({
-  titleTemplate: (titleChunk) => {
-    if (route.meta.title || titleChunk) {
-      return `${titleChunk || route.meta.title} | Nuxt 3 + Nuxt UI Starter Template`;
-    }
+	titleTemplate: (titleChunk) => {
+		if (route.meta.title || titleChunk) {
+			return `${titleChunk || route.meta.title} | Nuxt 3 + Nuxt UI Starter Template`;
+		}
 
-    return "Home - Nuxt 3 + Nuxt UI Starter Template";
-  },
-  meta: [
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { key: "theme-color", name: "theme-color", content: color },
-  ],
-  link: [
-    { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-  ],
-  htmlAttrs: {
-    lang: "en",
-  },
+		return "Home - Nuxt 3 + Nuxt UI Starter Template";
+	},
+	meta: [
+		{ name: "viewport", content: "width=device-width, initial-scale=1" },
+		{ key: "theme-color", name: "theme-color", content: color },
+	],
+	link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+	htmlAttrs: {
+		lang: "en",
+	},
 });
-
 </script>
 
 <template>
-  <div class="font-manrope w-screen overflow-hidden">
-    <NuxtLayout name="default">
-      <pre>{{ country }}</pre>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+	<div class="font-manrope w-screen overflow-hidden">
+		<NuxtLayout name="default">
+			<pre>{{ country }}</pre>
+			<NuxtPage />
+		</NuxtLayout>
+	</div>
 </template>

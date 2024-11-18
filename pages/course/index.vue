@@ -1,34 +1,3 @@
-<template>
-  <div>
-    <!-- Popular Courses Section -->
-    <div class="container mx-auto px-4 py-16">
-      <h2 class="text-2xl font-semibold mb-8 text-center">Daftar Kursus</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div
-          v-for="course in popularCourses"
-          :key="course.id"
-          class="rounded-lg overflow-hidden shadow-lg bg-white"
-        >
-          <img
-            :src="course.image"
-            alt="Course Image"
-            class="w-full h-40 object-cover"
-          />
-          <div class="p-4">
-            <p class="text-center font-semibold text-black">{{ course.title }}</p>
-            <div class="mt-4 flex justify-between items-center">
-              <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                Nonton Course
-              </button>
-              <div class="text-sm text-gray-500">{{ course.progress }}% Selesai</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -46,11 +15,48 @@ export default {
         { id: 10, title: "Kursus 10", image: "/assets/img/populer.png", progress: 40 },
         { id: 11, title: "Kursus 11", image: "/assets/img/populer.png", progress: 20 },
         { id: 12, title: "Kursus 12", image: "/assets/img/populer.png", progress: 90 },
-      ]
+      ],
     };
   },
 };
 </script>
+
+<template>
+  <div>
+    <!-- Popular Courses Section -->
+    <div class="container mx-auto px-4 py-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center">
+        Daftar Kursus
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div
+          v-for="course in popularCourses"
+          :key="course.id"
+          class="rounded-lg overflow-hidden shadow-lg bg-white"
+        >
+          <img
+            :src="course.image"
+            alt="Course Image"
+            class="w-full h-40 object-cover"
+          >
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              {{ course.title }}
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                Nonton Course
+              </button>
+              <div class="text-sm text-gray-500">
+                {{ course.progress }}% Selesai
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 /* Tambahkan gaya tambahan di sini jika diperlukan */
