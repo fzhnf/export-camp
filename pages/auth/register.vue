@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router"
+
 const supabase = useSupabaseClient();
+const router = useRouter();
+
 const email = ref("");
 const password = ref("");
 const phone = ref("");
@@ -10,8 +14,11 @@ async function signUpWithPassword() {
     password: password.value,
     phone: phone.value,
   });
-  if (error)
+  if (error){
     console.log(error);
+  } else {
+    router.push("/auth/login")
+  }
 }
 </script>
 
