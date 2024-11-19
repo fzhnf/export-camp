@@ -112,7 +112,14 @@ export default defineNuxtConfig({
 	supabase: {
 		url: process.env.NUXT_PUBLIC_SUPABASE_URL,
 		key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
-		redirect: false,
+		redirect: true,
+		redirectOptions: {
+			login: "/auth/login",
+			callback: "/auth/confirm",
+			include: undefined,
+			exclude: [],
+			cookieRedirect: false,
+		},
 	},
 	vite: {
 		resolve: {
