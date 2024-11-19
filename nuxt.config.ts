@@ -117,7 +117,7 @@ export default defineNuxtConfig({
 			login: "/auth/login",
 			callback: "/auth/confirm",
 			include: undefined,
-			exclude: [],
+			exclude: ["/"],
 			cookieRedirect: false,
 		},
 	},
