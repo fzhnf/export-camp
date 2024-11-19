@@ -1,4 +1,15 @@
 <script setup lang="ts">
+const supabase = useSupabaseClient();
+
+
+const { data: country } = await useAsyncData('restaurant', async () => {
+  const { data } = await supabase.from('countries').select()
+
+  return data
+})
+console.log(country)
+
+
 const colorMode = useColorMode();
 const route = useRoute();
 
@@ -24,16 +35,12 @@ useHead({
   },
 });
 
-//const layout = computed(() => {
-//  const isTourRoute = route.path.includes("/tour");
-//
-//  return isTourRoute ? "tour" : "default";
-//});
 </script>
 
 <template>
   <div class="font-manrope w-screen overflow-hidden">
     <NuxtLayout name="default">
+      <pre>{{ country }}</pre>
       <NuxtPage />
     </NuxtLayout>
   </div>
