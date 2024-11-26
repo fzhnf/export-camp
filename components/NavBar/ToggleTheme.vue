@@ -1,6 +1,6 @@
 <!-- ToggleTheme.vue -->
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed } from "vue";
 
 const colorMode = useColorMode();
 const isDark = computed({
@@ -18,6 +18,8 @@ function toggleTheme() {
 </script>
 
 <template>
-  <UButton :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" color="gray" variant="ghost"
-    aria-label="Theme" @click="toggleTheme" />
+  <UButton
+    :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" color="gray" variant="ghost"
+    aria-label="Theme" @click="toggleTheme"
+  />
 </template>

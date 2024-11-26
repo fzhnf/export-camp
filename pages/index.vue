@@ -10,14 +10,19 @@
             Sampai Ahli
           </h1>
           <p class="text-lg text-white">
-            Misi kami adalah membantu orang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
+            Misi kami adalah membantu orang-orang untuk menemukan kursus online
+            terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
           </p>
           <button class="bg-blue-500 text-white px-6 py-3 rounded-lg">
             Daftar
           </button>
         </div>
         <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-          <img src="/assets/img/header.jpg" alt="Hero Image" class="rounded-lg shadow-lg max-w-full h-auto">
+          <img
+            src="/assets/img/header.jpg"
+            alt="Hero Image"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+          >
         </div>
       </div>
     </div>
@@ -28,8 +33,16 @@
         Kursus terpopuler
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div v-for="course in 8" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
-          <img src="/assets/img/populer.png" alt="Course Image" class="w-full h-40 object-cover">
+        <div
+          v-for="course in 8"
+          :key="course"
+          class="rounded-lg overflow-hidden shadow-lg bg-white"
+        >
+          <img
+            src="/assets/img/populer.png"
+            alt="Course Image"
+            class="w-full h-40 object-cover"
+          >
           <div class="p-4">
             <p class="text-center font-semibold text-black">
               Lorem Ipsum
@@ -45,8 +58,16 @@
         pilihan Road Map kami
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div v-for="roadmap in 4" :key="roadmap" class="bg-white rounded-lg shadow-lg p-4 flex items-center space-x-4">
-          <img src="/assets/img/populer.png" alt="Roadmap Image" class="w-1/4 h-24 object-cover rounded-lg">
+        <div
+          v-for="roadmap in 4"
+          :key="roadmap"
+          class="bg-white rounded-lg shadow-lg p-4 flex items-center space-x-4"
+        >
+          <img
+            src="/assets/img/populer.png"
+            alt="Roadmap Image"
+            class="w-1/4 h-24 object-cover rounded-lg"
+          >
           <div class="flex-grow">
             <p class="text-lg font-semibold text-black">
               Lorem Ipsum
@@ -55,9 +76,12 @@
               Kevin Gilbert
             </p>
             <div class="flex items-center space-x-2 text-sm text-gray-500 mt-2">
-              <Icon name="mdi-account" class="w-4 h-4" /> <span>265.7K siswa</span>
-              <Icon name="mdi-chart-line" class="w-4 h-4" /> <span>pemula</span>
-              <Icon name="mdi-clock-outline" class="w-4 h-4" /> <span>6 jam</span>
+              <Icon name="mdi-account" class="w-4 h-4" />
+              <span>265.7K siswa</span>
+              <Icon name="mdi-chart-line" class="w-4 h-4" />
+              <span>pemula</span>
+              <Icon name="mdi-clock-outline" class="w-4 h-4" />
+              <span>6 jam</span>
             </div>
           </div>
         </div>
@@ -69,8 +93,16 @@
           Kursus terbaru
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div v-for="latestCourse in 4" :key="latestCourse" class="rounded-lg overflow-hidden shadow-lg bg-white">
-            <img src="/assets/img/populer.png" alt="Latest Course Image" class="w-full h-40 object-cover">
+          <div
+            v-for="latestCourse in 4"
+            :key="latestCourse"
+            class="rounded-lg overflow-hidden shadow-lg bg-white"
+          >
+            <img
+              src="/assets/img/populer.png"
+              alt="Latest Course Image"
+              class="w-full h-40 object-cover"
+            >
             <div class="p-4">
               <p class="text-center font-semibold text-black">
                 Lorem Ipsum

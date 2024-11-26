@@ -1,19 +1,10 @@
 <script setup lang="ts">
-const supabase = useSupabaseClient();
-
-
-const { data: country } = await useAsyncData('restaurant', async () => {
-  const { data } = await supabase.from('countries').select()
-
-  return data
-})
-console.log(country)
-
-
 const colorMode = useColorMode();
 const route = useRoute();
 
-const color = computed(() => colorMode.value === "dark" ? "#111827" : "#f1f5f9");
+const color = computed(() =>
+  colorMode.value === "dark" ? "#111827" : "#f1f5f9",
+);
 
 useHead({
   titleTemplate: (titleChunk) => {
@@ -27,20 +18,16 @@ useHead({
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { key: "theme-color", name: "theme-color", content: color },
   ],
-  link: [
-    { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-  ],
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   htmlAttrs: {
     lang: "en",
   },
 });
-
 </script>
 
 <template>
   <div class="font-manrope w-screen overflow-hidden">
     <NuxtLayout name="default">
-      <pre>{{ country }}</pre>
       <NuxtPage />
     </NuxtLayout>
   </div>

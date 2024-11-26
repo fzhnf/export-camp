@@ -12,7 +12,8 @@ For further details, refer to the [Nuxt documentation](https://nuxt.com/docs/get
 - Integrates @nuxt/ui, @pinia/nuxt, and @sidebase/nuxt-auth modules
 - Includes ESLint for linting and code formatting
 - Full TypeScript support with type checking via vue-tsc
-- + new package nuxt-icons (not nuxt-icon) for importing svg purpose, not to be confused with nuxt-icon that also used in this project as icon library
+- - new package nuxt-icons (not nuxt-icon) for importing svg purpose, not to be confused with nuxt-icon that also used in this project as icon library
+
 ## Setup
 
 Make sure to install the dependencies:
@@ -58,4 +59,3 @@ This project includes several useful scripts:
 - **Linting**: `pnpm lint` (runs ESLint for code linting)
 - **Code Formatting**: `pnpm format` (fixes code format using ESLint)
 - **Type Checking**: `pnpm typecheck` (runs type checking with vue-tsc and nuxi)
-
