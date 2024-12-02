@@ -1,14 +1,20 @@
 {
-  "formatter": {
-    "indentStyle": "space",   // Space indentation (instead of tabs)
-    "indentSize": 2,          // 2 spaces per indent level
-    "quoteStyle": "double",   // Double quotes for strings
-    "semicolons": "asNeeded"            // Use semicolons
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "no-console": "warn"     // Warn on console statements
-    }
-  },
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "space", // Space indentation (instead of tabs)
+		"indentSize": 2, // 2 spaces per indent level
+		"quoteStyle": "double", // Double quotes for strings
+		"semi": true, // Use semicolons
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"no-console": "warn", // Warn on console statements
+		},
+	},
+	"files": {
+		"include": ["src/**/*.js", "src/**/*.ts"], // Specify which files should be included in linting and formatting
+		"ignore": ["**/*.min.js", "**/node_modules/**"], // Ignore minified JS and node_modules
+	},
 }
