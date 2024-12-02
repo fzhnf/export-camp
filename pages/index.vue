@@ -1,4 +1,21 @@
+<script lang="ts" setup>
+const supabase = useSupabaseClient();
+
+
+const { data: country } = await useAsyncData('restaurant', async () => {
+  const { data } = await supabase.from('countries').select()
+
+  return data
+})
+console.log(country)
+
+const { data: bucket } = await supabase.storage.listBuckets()
+
+</script>
+
 <template>
+  <pre>{{ country }}</pre>
+  <pre>{{ bucket }}</pre>
   <div>
     <!-- Hero Section -->
     <div class="container mx-auto px-4 py-16">
@@ -10,7 +27,13 @@
             Sampai Ahli
           </h1>
           <p class="text-lg text-white">
-            Misi kami adalah membantu orang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
+            Misi kami adalah membantu orang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan
+            saja, di mana saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja,
+            di mana saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana
+            saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana
+            saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana
+            saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana
+            saja.rang-orang untuk menemukan kursus online terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
           </p>
           <button class="bg-blue-500 text-white px-6 py-3 rounded-lg">
             Daftar

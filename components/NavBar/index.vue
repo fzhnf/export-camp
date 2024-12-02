@@ -7,7 +7,8 @@ const links = [
     to: '/'
   },
   {
-    label: 'Academy',
+    label: 'Course',
+    to: '/course'
   },
   {
     label: 'Challenge',
@@ -22,7 +23,7 @@ const links = [
 </script>
 
 <template>
-  <header class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-800">
+  <header class="flex items-center justify-between px-4 py-2 border-b border-gray-300 dark:border-gray-700">
     <!-- Left Section: Logo and Navigation Links -->
     <div class="flex items-center space-x-4">
       <!-- Logo -->
