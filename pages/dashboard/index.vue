@@ -65,7 +65,7 @@ watch(user, () => {
 
 		<!-- Enrolled Courses Section -->
 		<div class="enrolled-courses mb-8">
-			<h3 class="text-xl font-semibold text-gray-800 mb-4">Enrolled Courses</h3>
+			<h3 class="text-xl text-black dark:text-white font-semibold text-gray-800 mb-4">Enrolled Courses</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<!-- Loop through enrolled courses -->
 				<div v-for="course in enrolledCourses" :key="course.id"
@@ -85,7 +85,7 @@ watch(user, () => {
 
 		<!-- Watched Videos Section -->
 		<div class="watched-videos">
-			<h3 class="text-xl font-semibold text-gray-800 mb-4">Watched Videos</h3>
+			<h3 class="text-xl text-black dark:text-white font-semibold text-gray-800 mb-4">Watched Videos</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<!-- Loop through watched videos -->
 				<div v-for="video in watchedVideos" :key="video.id"

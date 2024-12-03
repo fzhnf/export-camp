@@ -23,6 +23,7 @@
     "@sidebase/nuxt-auth": "^0.9.4",
     "nuxt": "^3.13.2",
     "nuxt-icons": "^3.2.1",
+    "supabase": "^1.226.3",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.23.8"
