@@ -84,7 +84,7 @@ onMounted(() => {
 		<div class="video-player flex-1">
 			<div class="video-container bg-black mb-4">
 				<!-- Video Player -->
-				<video @play="handleWatchVideo" :src="video?.video" controls class="w-full h-full"
+				<video @click="handleWatchVideo" :src="video?.video" controls class="w-full h-full"
 					v-if="video">
 				</video>
 			</div>
