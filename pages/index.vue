@@ -1,21 +1,4 @@
-<script lang="ts" setup>
-const supabase = useSupabaseClient();
-
-
-const { data: country } = await useAsyncData('restaurant', async () => {
-  const { data } = await supabase.from('countries').select()
-
-  return data
-})
-console.log(country)
-
-const { data: bucket } = await supabase.storage.listBuckets()
-
-</script>
-
 <template>
-  <pre>{{ country }}</pre>
-  <pre>{{ bucket }}</pre>
   <div>
     <!-- Hero Section -->
     <div class="container mx-auto px-4 py-16">
@@ -35,11 +18,7 @@ const { data: bucket } = await supabase.storage.listBuckets()
           </button>
         </div>
         <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-          <img
-            src="/assets/img/header.jpg"
-            alt="Hero Image"
-            class="rounded-lg shadow-lg max-w-full h-auto"
-          >
+          <img src="/assets/img/header.jpg" alt="Hero Image" class="rounded-lg shadow-lg max-w-full h-auto">
         </div>
       </div>
     </div>
@@ -50,16 +29,8 @@ const { data: bucket } = await supabase.storage.listBuckets()
         Kursus terpopuler
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div
-          v-for="course in 8"
-          :key="course"
-          class="rounded-lg overflow-hidden shadow-lg bg-white"
-        >
-          <img
-            src="/assets/img/populer.png"
-            alt="Course Image"
-            class="w-full h-40 object-cover"
-          >
+        <div v-for="course in 8" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/populer.png" alt="Course Image" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-center font-semibold text-black">
               Lorem Ipsum
@@ -75,16 +46,8 @@ const { data: bucket } = await supabase.storage.listBuckets()
         pilihan Road Map kami
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div
-          v-for="roadmap in 4"
-          :key="roadmap"
-          class="bg-white rounded-lg shadow-lg p-4 flex items-center space-x-4"
-        >
-          <img
-            src="/assets/img/populer.png"
-            alt="Roadmap Image"
-            class="w-1/4 h-24 object-cover rounded-lg"
-          >
+        <div v-for="roadmap in 4" :key="roadmap" class="bg-white rounded-lg shadow-lg p-4 flex items-center space-x-4">
+          <img src="/assets/img/populer.png" alt="Roadmap Image" class="w-1/4 h-24 object-cover rounded-lg">
           <div class="flex-grow">
             <p class="text-lg font-semibold text-black">
               Lorem Ipsum
@@ -110,16 +73,8 @@ const { data: bucket } = await supabase.storage.listBuckets()
           Kursus terbaru
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div
-            v-for="latestCourse in 4"
-            :key="latestCourse"
-            class="rounded-lg overflow-hidden shadow-lg bg-white"
-          >
-            <img
-              src="/assets/img/populer.png"
-              alt="Latest Course Image"
-              class="w-full h-40 object-cover"
-            >
+          <div v-for="latestCourse in 4" :key="latestCourse" class="rounded-lg overflow-hidden shadow-lg bg-white">
+            <img src="/assets/img/populer.png" alt="Latest Course Image" class="w-full h-40 object-cover">
             <div class="p-4">
               <p class="text-center font-semibold text-black">
                 Lorem Ipsum

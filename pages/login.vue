@@ -1,11 +1,9 @@
 <script setup lang="ts">
 const supabase = useSupabaseClient()
-
 import { z } from 'zod'
 import type { FormSubmitEvent } from '#ui/types'
 
 const schema = z.object({
-  username: z.string().min(3, 'Must be at least 3 characters'),
   email: z.string().email('Invalid email'),
   password: z.string().min(8, 'Must be at least 8 characters')
 })
@@ -13,24 +11,17 @@ const schema = z.object({
 type Schema = z.output<typeof schema>
 
 const state = reactive({
-  username: '',
   email: '',
   password: ''
 })
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
-  const { data, error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signInWithPassword({
     email: state.email,
     password: state.password,
-    options: {
-      data: {
-        username: state.username
-      }
-    }
   })
   if (error) { console.log(error) } else {
     navigateTo('/dashboard')
-
   }
   console.log(data)
   console.log(event.data)
@@ -39,10 +30,6 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
 
 <template>
   <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormGroup label="Username" name="username">
-      <UInput v-model="state.username" type="text" />
-    </UFormGroup>
-
     <UFormGroup label="Email" name="email">
       <UInput v-model="state.email" />
     </UFormGroup>
@@ -55,10 +42,9 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
       Submit
     </UButton>
   </UForm>
-  Already have an account?
-  <ULink to="/login" active-class="text-primary"
+  Don't have an account?
+  <ULink to="/register" active-class="text-primary"
     inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
-    Login here
+    Register here
   </ULink>
-
 </template>

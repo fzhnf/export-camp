@@ -1,24 +1,27 @@
 <script setup lang="ts">
-// Navigation links
-const links = [
+const user = useSupabaseUser()
+
+const staticLinks = [
   {
-    label: "Home",
-    to: "/",
+    label: 'Roadmap',
+    to: '/roadmaps'
   },
   {
     label: 'Course',
-    to: '/course'
-  },
-  {
-    label: "Challenge",
-  },
-  {
-    label: "Event",
-  },
-  {
-    label: "Job",
-  },
-];
+    to: '/courses'
+  }
+]
+
+// Navigation links
+const links = ref(staticLinks)
+
+watchEffect(async () => {
+  if (user.value) {
+    links.value = [{ label: 'Dashboard', to: '/dashboard' }, ...staticLinks]
+  } else {
+    links.value = [{ label: 'Home', to: '/' }, ...staticLinks]
+  }
+})
 </script>
 
 <template>
@@ -26,7 +29,8 @@ const links = [
     <!-- Left Section: Logo and Navigation Links -->
     <div class="flex items-center space-x-4">
       <!-- Logo -->
-      <nuxt-icon name="export-camp-logo" class="text-3xl text-green-500" />
+      <NuxtLink to="/"> <nuxt-icon name="export-camp-logo" class="text-3xl text-green-500" />
+      </NuxtLink>
 
       <!-- Navigation Links -->
       <UHorizontalNavigation :links="links" class="space-x-6" />
@@ -37,20 +41,9 @@ const links = [
       <!-- Theme Toggle Button -->
       <NavBarToggleTheme />
 
-      <!-- Notification Icon -->
-      <UButton label="Notifications" icon="i-heroicons-bell-20-solid" variant="ghost" color="gray">
-        <!-- Optional badge for unread notifications -->
-        <span class="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full" />
-      </UButton>
-
       <!-- User Profile Icon -->
-      <div class="relative">
-        <img
-          src="https://avatars.githubusercontent.com/u/739984?v=4" alt="User"
-          class="h-8 w-8 rounded-full border-2 border-cyan-500"
-        >
-        <!-- Dropdown could be added here for additional user options -->
-      </div>
+      <NavBarUserMenu v-if="user" />
+      <NavBarGuestButton v-else />
     </div>
   </header>
 </template>
