@@ -18,7 +18,7 @@
     "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.18.7",
-    "@nuxtjs/supabase": "^1.4.2",
+    "@nuxtjs/supabase": "^1.4.3",
     "@pinia/nuxt": "^0.6.1",
     "@sidebase/nuxt-auth": "^0.9.4",
     "nuxt": "^3.13.2",

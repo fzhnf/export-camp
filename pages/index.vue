@@ -29,11 +29,67 @@
         Kursus terpopuler
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div v-for="course in 8" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
-          <img src="/assets/img/populer.png" alt="Course Image" class="w-full h-40 object-cover">
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/EKSPOR-IMPOR.png" alt="Course Image" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-center font-semibold text-black">
-              Lorem Ipsum
+              Training Prosedur Ekspor Impor
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/eksport_becak.jpg" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Ekspor Becak
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/ikan_hias.jpg" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Ekspor Ikan Hias
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/img-training.jpg" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Traingin Tips Pemasaran Ekspor Produk Pertanian
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/Kelas-Ekspor-Fundamental.png" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Ekspor Fundamental Class
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/Kelas-Ekspor-Master-Class.png" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Ekspor Master Class
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/pengiriman+produk.jpg" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Pengiriman Produk Ekspor 
+            </p>
+          </div>
+        </div>
+        <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="/assets/img/professional_training.png" alt="Course Image" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <p class="text-center font-semibold text-black">
+              Training Professional Ekspor
             </p>
           </div>
         </div>
