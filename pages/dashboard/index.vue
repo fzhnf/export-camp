@@ -69,15 +69,15 @@ watch(user, () => {
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<!-- Loop through enrolled courses -->
 				<div v-for="course in enrolledCourses" :key="course.id"
-					class="course-card bg-white shadow-lg rounded-lg p-4">
+					class="course-card bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
 					<img :src="course.thumbnail!" alt="Course Thumbnail"
 						class="w-full h-40 object-cover rounded-lg mb-4" />
-					<h4 class="text-lg font-medium text-gray-700">{{ course.name }}</h4>
-					<p class="text-sm text-gray-600">{{ course.desc }}</p>
+					<h4 class="text-lg font-medium text-gray-700 dark:text-white">{{ course.name }}</h4>
+					<p class="text-sm text-gray-600 dark:text-white">{{ course.desc }}</p>
 					<div class="teacher-info mt-4 flex items-center gap-2">
 						<img :src="course.teacher_avatar!" alt="Teacher Avatar"
 							class="w-8 h-8 rounded-full object-cover" />
-						<span class="text-sm text-gray-500">{{ course.teacher }}</span>
+						<span class="text-sm text-gray-500 dark:text-white">{{ course.teacher }}</span>
 					</div>
 				</div>
 			</div>
@@ -89,11 +89,11 @@ watch(user, () => {
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<!-- Loop through watched videos -->
 				<div v-for="video in watchedVideos" :key="video.id"
-					class="video-card bg-white shadow-lg rounded-lg p-4">
+					class="video-card bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
 					<img :src="video.thumbnail!" alt="Video Thumbnail"
 						class="w-full h-40 object-cover rounded-lg mb-4" />
-					<h4 class="text-lg font-medium text-gray-700">{{ video.title }}</h4>
-					<p class="text-sm text-gray-600">{{ video.desc }}</p>
+					<h4 class="text-lg font-medium text-gray-700 dark:text-white">{{ video.title }}</h4>
+					<p class="text-sm text-gray-600 dark:text-white">{{ video.desc }}</p>
 				</div>
 			</div>
 		</div>
