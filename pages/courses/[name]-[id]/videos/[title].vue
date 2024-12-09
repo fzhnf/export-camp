@@ -88,7 +88,7 @@ onMounted(() => {
 					v-if="video">
 				</video>
 			</div>
-			<div class="video-description mt-4 text-white" v-if="video">
+			<div class="video-description mt-4 text-black dark:text-white" v-if="video">
 				<h2 class="text-2xl font-semibold">{{ video?.title }}</h2>
 				<p class="mt-2">{{ video?.desc }}</p>
 			</div>
@@ -96,7 +96,7 @@ onMounted(() => {
 
 		<!-- Playlist Section -->
 		<div class="playlist w-64 ml-8">
-			<h3 class="text-xl font-semibold text-gray-800 mb-4">Video Playlist</h3>
+			<h3 class="text-xl font-semibold text-gray-800 mb-4 dark:text-white">Video Playlist</h3>
 			<div class="playlist-items">
 				<!-- Loop through videos to create the playlist -->
 				<div v-for="videoItem in videos" :key="videoItem.id"
@@ -107,8 +107,8 @@ onMounted(() => {
 					<img :src="videoItem.thumbnail!" alt="Video Thumbnail"
 						class="w-20 h-20 object-cover rounded-lg" />
 					<div>
-						<h4 class="text-lg font-medium text-gray-700">{{ videoItem.title }}</h4>
-						<p class="text-sm text-gray-600">{{ videoItem.desc }}</p>
+						<h4 class="text-lg font-medium text-gray-700 dark:text-white">{{ videoItem.title }}</h4>
+						<p class="text-sm text-gray-600 dark:text-white">{{ videoItem.desc }}</p>
 					</div>
 				</div>
 			</div>

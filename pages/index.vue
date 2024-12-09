@@ -9,7 +9,7 @@
             Strategi Dan Cara Ekspor <br>
             Sampai Ahli
           </h1>
-          <p class="text-lg text-white">
+          <p class="text-lg text-black dark:text-white">
             Misi kami adalah membantu orang-orang untuk menemukan kursus online
             terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
           </p>

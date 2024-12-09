@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+courses<script lang="ts" setup>
 import type { Tables } from '~/types/database.types'
 
 const route = useRoute()
@@ -97,7 +97,7 @@ const handleEnroll = async () => {
 
 		<!-- Videos Section (only visible if user is enrolled) -->
 		<div v-if="enrolledCourse" class="videos-section">
-			<h3 class="text-xl font-semibold text-gray-800 mb-4">Course Videos</h3>
+			<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Course Videos</h3>
 
 			<div v-if="videos.length === 0" class="text-gray-500">
 				No videos available for this course yet.
