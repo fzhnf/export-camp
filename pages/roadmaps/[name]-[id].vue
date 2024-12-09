@@ -49,7 +49,7 @@ onMounted(() => {
 
 	<!-- Courses Section: List of Courses -->
 	<div class="mt-12 px-8">
-		<h2 class="text-3xl font-semibold text-gray-800">Courses</h2>
+		<h2 class="text-3xl font-semibold text-gray-800 dark:text-white">Courses</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
 			<NuxtLink v-for="course in courses" :key="course.id"
 				:to="`/courses/${course.name}-${course.id}`">

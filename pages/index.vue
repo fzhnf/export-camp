@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <div class="container mx-auto px-4 py-16">
+    <div class="container mx-auto px-4 py-10">
       <div class="flex flex-col md:flex-row items-center">
-        <div class="text-center md:text-left md:w-1/2 space-y-4">
+        <div class="text-center md:text-left md:w-1/2 space-y-4 pr-1">
           <h1 class="text-4xl font-bold leading-snug">
             Belajar Mudah <br>
             Strategi Dan Cara Ekspor <br>
             Sampai Ahli
           </h1>
-          <p class="text-lg text-white">
+          <p class="text-lg text-black dark:text-white">
             Misi kami adalah membantu orang-orang untuk menemukan kursus online
             terbaik dan belajar dengan ahlinya kapan saja, di mana saja.
           </p>
@@ -24,9 +24,9 @@
     </div>
 
     <!-- Popular Courses Section -->
-    <div class="container mx-auto px-4 py-16">
-      <h2 class="text-2xl font-semibold mb-8 text-center">
-        Kursus terpopuler
+    <div class="container mx-auto  px-4 py-16 rounded-t-lg">
+      <h2 class="text-2xl font-semibold mb-8 text-center text-black dark:text-white">
+        Kursus Terpopuler
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div v-for="course in 1" :key="course" class="rounded-lg overflow-hidden shadow-lg bg-white">
@@ -97,21 +97,21 @@
     </div>
 
     <!-- "Pilihan Road Map Kami" Section -->
-    <div class="container mx-auto px-4 py-16 bg-gray-100">
-      <h2 class="text-2xl font-semibold mb-8 text-center text-black">
-        pilihan Road Map kami
+    <div class="container mx-auto px-4 py-16 ">
+      <h2 class="text-2xl font-semibold mb-8 text-center text-black dark:text-white">
+        Pilihan Road Map Kami
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div v-for="roadmap in 4" :key="roadmap" class="bg-white rounded-lg shadow-lg p-4 flex items-center space-x-4">
-          <img src="/assets/img/populer.png" alt="Roadmap Image" class="w-1/4 h-24 object-cover rounded-lg">
+        <div v-for="roadmap in 4" :key="roadmap" class="bg-white dark:bg-gray-600 rounded-lg shadow-lg p-4 flex items-center space-x-4">
+          <img src="/assets/img/roadmap.jpg" alt="Roadmap Image" class="w-1/4 h-24 object-cover rounded-lg">
           <div class="flex-grow">
-            <p class="text-lg font-semibold text-black">
+            <p class="text-lg font-semibold text-black dark:text-gray-200">
               Lorem Ipsum
             </p>
-            <p class="text-sm text-gray-500">
+            <p class="text-sm text-gray-500 dark:text-gray-200">
               Kevin Gilbert
             </p>
-            <div class="flex items-center space-x-2 text-sm text-gray-500 mt-2">
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mt-2 dark:text-gray-200">
               <Icon name="mdi-account" class="w-4 h-4" />
               <span>265.7K siswa</span>
               <Icon name="mdi-chart-line" class="w-4 h-4" />
@@ -124,15 +124,15 @@
       </div>
 
       <!-- Latest Courses Section -->
-      <div class="container mx-auto px-4 py-16">
-        <h2 class="text-2xl font-semibold mb-8 text-center dark:text-black">
+      <div class="container mx-auto px-4 py-16 rounded-b-lg">
+        <h2 class="text-2xl font-semibold mb-8 text-center dark:text-white">
           Kursus terbaru
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div v-for="latestCourse in 4" :key="latestCourse" class="rounded-lg overflow-hidden shadow-lg bg-white">
-            <img src="/assets/img/populer.png" alt="Latest Course Image" class="w-full h-40 object-cover">
+          <div v-for="latestCourse in 4" :key="latestCourse" class="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-600">
+            <img src="/assets/img/course.jpg" alt="Latest Course Image" class="w-full h-40 object-cover">
             <div class="p-4">
-              <p class="text-center font-semibold text-black">
+              <p class="text-center font-semibold text-black dark:text-gray-200">
                 Lorem Ipsum
               </p>
             </div>
