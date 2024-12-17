@@ -9,6 +9,10 @@ const staticLinks = [
   {
     label: 'Course',
     to: '/courses'
+  },
+  {
+    label: 'About',
+    to: '/about'
   }
 ]
 
